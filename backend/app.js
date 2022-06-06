@@ -27,9 +27,9 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect('mongodb+srv://manu:academind123@cluster0-ntrwp.mongodb.net/places?retryWrites=true&w=majority')
+  .connect('mongodb+srv://dkshtjoshi9:WqmfQUt0cWtH4SOx@mongotestcluster.sycdq.mongodb.net/mern?retryWrites=true&w=majority')
   .then(() => {
-    app.listen(5000);
+    app.listen(process.env.PORT || 5000);
   })
   .catch(err => {
     console.log(err);
