@@ -29,6 +29,7 @@ app.use((error, req, res, next) => {
 mongoose
   .connect('mongodb+srv://dkshtjoshi9:WqmfQUt0cWtH4SOx@mongotestcluster.sycdq.mongodb.net/mern?retryWrites=true&w=majority')
   .then(() => {
+    console.log("connected to mongo db")
     app.listen(process.env.PORT || 5000);
   })
   .catch(err => {
